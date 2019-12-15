@@ -2,6 +2,7 @@ import React from 'react';
 import Contribute from './Contribute';
 import Navbar from './Navbar';
 import PropTypes from 'prop-types';
+import Search from './Search';
 
 function ContributeControl(props) {
     return (
@@ -13,12 +14,14 @@ function ContributeControl(props) {
                         key={summ.id} />
                 )}
             </div>
+            <Search onSearchCreation={props.handleAddingNewSearchTerm} />
         </div>
     );
 }
 
 ContributeControl.propTypes = {
-    contributeList: PropTypes.array
+    contributeList: PropTypes.array,
+    handleAddingNewSearchTerm: PropTypes.func
 };
 
 export default ContributeControl;
