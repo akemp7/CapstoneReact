@@ -6,6 +6,7 @@ class Contribute extends React.Component {
         super(props);
         this.state = {
             summary: null,
+            
         };
     }
 

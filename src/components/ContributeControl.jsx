@@ -2,26 +2,47 @@ import React from 'react';
 import Contribute from './Contribute';
 import Navbar from './Navbar';
 import PropTypes from 'prop-types';
-import Search from './Search';
 
-function ContributeControl(props) {
-    return (
-        <div>
-            <Navbar />
+class ContributeControl extends React.Component {
+    constructor() {
+        super();
+    }
+
+    render() {
+        return(
             <div>
-                {props.contributeList.map((summ) =>
-                    <Contribute summary={summ.summary}
-                        key={summ.id} />
-                )}
+                <Navbar />
+                <div>
+                    {this.props.contributeList.map((summ) =>
+                        <Contribute summary={summ.summary}
+                            key={summ.id} />
+                    )}
+                </div>
+                <input type="text" value="Search"/>
             </div>
-            <Search onSearchCreation={props.handleAddingNewSearchTerm} />
-        </div>
-    );
+        )
+    }
 }
+
+
+// function ContributeControl(props){
+//         return (
+//             <div>
+//                 <Navbar />
+//                 <div>
+//                     {props.contributeList.map((summ) =>
+//                         <Contribute summary={summ.summary}
+//                             key={summ.id} />
+//                     )}
+//                 </div>
+//             </div>
+//         );
+//     }
+
+
 
 ContributeControl.propTypes = {
     contributeList: PropTypes.array,
-    handleAddingNewSearchTerm: PropTypes.func
 };
 
 export default ContributeControl;
