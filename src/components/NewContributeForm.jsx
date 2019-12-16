@@ -10,7 +10,7 @@ function NewContributeForm(props) {
     function handleNewSubmission(event) {
         event.preventDefault();
         props.onNewContribution({ summary: _summary.value, id: v4() })
-
+    
         _summary.value = '';
     }
 
@@ -28,7 +28,7 @@ function NewContributeForm(props) {
     return (
         <div>
             <Navbar />
-            <p>Contribute to the corpus! Watch the short video, and then summarize what you saw. Do not worry about spelling, punctuation, etc.</p>
+            <p style={inputField}>Contribute to the corpus! Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
             <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
             <form onSubmit={handleNewSubmission} style={inputField}>

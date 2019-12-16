@@ -12,6 +12,7 @@
     "author": "Anita Kemp",
     "license": "ISC",
     "dependencies": {
+        "pos": "^0.4.2",
         "prop-types": "^15.5.10",
         "react": "^15.5.4",
         "react-dom": "^15.5.4",
