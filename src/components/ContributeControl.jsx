@@ -6,39 +6,35 @@ import PropTypes from 'prop-types';
 class ContributeControl extends React.Component {
     constructor() {
         super();
+        this.state = {
+            searchTerm: ''
+        };
+    }
+
+    search(event) {
+        this.setState({searchTerm: event.target.value});
     }
 
     render() {
+        let filteredList = this.props.contributeList.filter(
+            (summ) => {
+                return summ.summary.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
+            }
+        );
         return(
             <div>
                 <Navbar />
                 <div>
-                    {this.props.contributeList.map((summ) =>
+                    {filteredList.map((summ) =>
                         <Contribute summary={summ.summary}
                             key={summ.id} />
                     )}
                 </div>
-                <input type="text" value="Search"/>
+                <input type="text" value={this.state.searchTerm} onChange={this.search.bind(this)}/>
             </div>
         )
     }
 }
-
-
-// function ContributeControl(props){
-//         return (
-//             <div>
-//                 <Navbar />
-//                 <div>
-//                     {props.contributeList.map((summ) =>
-//                         <Contribute summary={summ.summary}
-//                             key={summ.id} />
-//                     )}
-//                 </div>
-//             </div>
-//         );
-//     }
-
 
 
 ContributeControl.propTypes = {

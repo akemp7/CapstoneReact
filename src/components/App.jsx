@@ -9,7 +9,6 @@ class App extends React.Component {
         super(props);
         this.state = {
             masterList: [],
-            term: '',
         };
         this.handleAddingNewSummary = this.handleAddingNewSummary.bind(this);
     }
