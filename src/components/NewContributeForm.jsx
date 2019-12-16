@@ -5,7 +5,6 @@ import YoutubeEmbedVideo from 'youtube-embed-video';
 import Navbar from './Navbar';
 
 function NewContributeForm(props) {
-   
     let _summary = null;
 
     function handleNewSubmission(event) {
@@ -15,17 +14,29 @@ function NewContributeForm(props) {
         _summary.value = '';
     }
 
+    var video={
+        marginTop: '60px',
+        marginLeft: '350px'
+    }
+
+    var inputField={
+        marginTop: '10px',
+        marginLeft: '20px',
+        marginRight: '20px'
+    }
+
     return (
         <div>
             <Navbar />
-            <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} />
+            <p>Contribute to the corpus! Watch the short video, and then summarize what you saw. Do not worry about spelling, punctuation, etc.</p>
+            <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
-            <form onSubmit={handleNewSubmission}>
-                <textarea
+            <form onSubmit={handleNewSubmission} style={inputField}>
+                <textarea className='form-control'
                     id='summary'
                     placeholder='Summarize what happened in the video'
                     ref={(input) => { _summary = input; }} />
-                <button type="submit" className="btn-btn">Submit!</button>
+                <button type="submit" className="btn-btn-info">Submit!</button>
             </form>
         </div>
     );
