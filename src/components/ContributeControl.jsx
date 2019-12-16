@@ -30,7 +30,7 @@ class ContributeControl extends React.Component {
                             key={summ.id} />
                     )}
                 </div>
-                <input type="text" value={this.state.searchTerm} onChange={this.search.bind(this)}/>
+                <button><input type="text" value={this.state.searchTerm} onChange={this.search.bind(this)} />Search!</button>
             </div>
         )
     }
