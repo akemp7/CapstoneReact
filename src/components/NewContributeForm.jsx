@@ -5,6 +5,7 @@ import YoutubeEmbedVideo from 'youtube-embed-video';
 import Navbar from './Navbar';
 
 function NewContributeForm(props) {
+   
     let _summary = null;
 
     function handleNewSubmission(event) {

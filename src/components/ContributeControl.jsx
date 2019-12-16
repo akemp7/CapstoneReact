@@ -10,7 +10,7 @@ class ContributeControl extends React.Component {
             searchTerm: ''
         };
     }
-
+    
     search(event) {
         this.setState({searchTerm: event.target.value});
     }

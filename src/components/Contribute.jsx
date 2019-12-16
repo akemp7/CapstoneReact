@@ -19,6 +19,7 @@ class Contribute extends React.Component {
     }
 }
 
+
 Contribute.propTypes = {
     summary: PropTypes.string,
 };
