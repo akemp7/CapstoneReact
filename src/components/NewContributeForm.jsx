@@ -16,27 +16,37 @@ function NewContributeForm(props) {
 
     var video={
         marginTop: '60px',
-        marginLeft: '350px'
+        marginLeft: '400px',
     }
 
     var inputField={
         marginTop: '10px',
         marginLeft: '20px',
-        marginRight: '20px'
+        marginRight: '20px',
+        fontSize: '25px',
+        textAlign: 'center',
+        color:'#4056A1'
     }
+
+    var button={
+        color: 'blue',
+        marginLeft: '625px'
+    }
+
 
     return (
         <div>
             <Navbar />
-            <p style={inputField}>Contribute to the corpus! Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
+            <p style={inputField}>Contribute to the corpus! </p>
+            <p style={inputField}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
             <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
-            <form onSubmit={handleNewSubmission} style={inputField}>
+            <form onSubmit={handleNewSubmission}>
                 <textarea className='form-control'
                     id='summary'
-                    placeholder='Summarize what happened in the video'
+                    placeholder='Write your summary here'
                     ref={(input) => { _summary = input; }} />
-                <button type="submit" className="btn-btn-info">Submit!</button>
+                <button style={button} type="submit" className="btn-btn-info">Submit!</button>
             </form>
         </div>
     );

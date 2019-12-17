@@ -11,9 +11,14 @@ class Contribute extends React.Component {
     }
 
     render() {
+        var text= {
+            textAlign: 'center',
+            marginTop: '25px',
+            fontSize: '18px'
+        }
         return (
             <div>
-                <p>{this.props.summary}</p>
+                    <p style={text}>{this.props.summary}</p>
             </div>
         );
     }

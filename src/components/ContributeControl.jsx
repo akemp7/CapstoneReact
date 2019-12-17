@@ -10,8 +10,7 @@ class ContributeControl extends React.Component {
             searchTerm: ''
         };
     }
-
-    
+   
     search(event) {
         this.setState({searchTerm: event.target.value});
     }
@@ -23,17 +22,23 @@ class ContributeControl extends React.Component {
                 return summ.summary.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
             }
         );
+
+        var background = {
+            color:  '#4056A1',
+            textAlign: 'center',
+            marginTop: '20px'
+        }
+
         return(
             <div>
                 <Navbar />
                 <div>
-                    <h3>Summaries</h3>
+                    <h3 style={background}>A list of summaries. Search for a particular word, letter, or phrase below.</h3>
                     {filteredList.map((summ) =>
                         <Contribute summary={summ.summary}
                             key={summ.id} />
                     )}
                 </div>
-                <h4>Search for a particular word, letter, or phrase below!</h4>
                 <button><input type="text" value={this.state.searchTerm} onChange={this.search.bind(this)} />Search!</button>
             </div>
         )
