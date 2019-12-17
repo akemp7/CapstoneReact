@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     var bar={
-        width: '100%',
+        width: '200%',
         backgroundColor: '#D79922'
     };
 
