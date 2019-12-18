@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import YoutubeEmbedVideo from 'youtube-embed-video';
 import Navbar from './Navbar';
+import language from '../Assets/language.jpg'
 
 function NewContributeForm(props) {
     let _summary = null;
@@ -14,9 +15,22 @@ function NewContributeForm(props) {
         _summary.value = '';
     }
 
+    var coverImage = {
+        width: '100%',
+        opacity: '0.2',
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        overflow: "hidden",
+        position: "relative",
+        top: "0",
+        left: "0",
+    }
     var video={
-        marginTop: '60px',
-        marginLeft: '400px',
+        textAlign: "center",
+        position: "absolute",
+        top: "55%",
+        right: "30%",
     }
 
     var inputField={
@@ -25,7 +39,17 @@ function NewContributeForm(props) {
         marginRight: '20px',
         fontSize: '25px',
         textAlign: 'center',
-        color:'#4056A1'
+        color:'#4056A1',
+        position: "absolute",
+        top: "19%",
+        right: "35%",
+    }
+
+    var heroInfo = {
+        textAlign: "center",
+        position: "absolute",
+        bottom: "50%",
+        right: "20%",
     }
 
     var button={
@@ -37,9 +61,10 @@ function NewContributeForm(props) {
     return (
         <div>
             <Navbar />
-            <div className="container">
+            <div>
+                <img src={language} style={coverImage} />
                 <p style={inputField}>Contribute to the corpus! </p>
-                <p style={inputField}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
+                <p style={heroInfo}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
                 <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
                 <form onSubmit={handleNewSubmission}>

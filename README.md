@@ -9,7 +9,6 @@ This application prompts a user to watch a video and summarize what happened. A 
 
 ### Stretch Goals:
 * _Authentication_
-* _POS tagging_
 * _API call_
 * _Voice recording_
 
