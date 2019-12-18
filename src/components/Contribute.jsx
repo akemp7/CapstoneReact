@@ -16,9 +16,14 @@ class Contribute extends React.Component {
             marginTop: '25px',
             fontSize: '18px'
         }
+
+        var pos = require("pos");
+        var words = new pos.Lexer().lex(this.props.summary);
+        var tagger = new pos.Tagger();
+        var taggedWords = tagger.tag(words);
         return (
             <div>
-                    <p style={text}>{this.props.summary}</p>
+                    <p style={text}>{taggedWords}</p>
             </div>
         );
     }

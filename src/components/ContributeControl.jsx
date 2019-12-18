@@ -16,7 +16,6 @@ class ContributeControl extends React.Component {
     }
 
     render() {
-        console.log(this.props.contributeList)
         let filteredList = this.props.contributeList.filter(
             (summ) => {
                 return summ.summary.toLowerCase().indexOf(this.state.searchTerm.toLowerCase()) !== -1;
@@ -32,7 +31,7 @@ class ContributeControl extends React.Component {
         return(
             <div>
                 <Navbar />
-                <div>
+                <div className="container">
                     <h3 style={background}>A list of summaries. Search for a particular word, letter, or phrase below.</h3>
                     {filteredList.map((summ) =>
                         <Contribute summary={summ.summary}

@@ -37,17 +37,19 @@ function NewContributeForm(props) {
     return (
         <div>
             <Navbar />
-            <p style={inputField}>Contribute to the corpus! </p>
-            <p style={inputField}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
-            <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
+            <div className="container">
+                <p style={inputField}>Contribute to the corpus! </p>
+                <p style={inputField}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
+                <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
-            <form onSubmit={handleNewSubmission}>
-                <textarea className='form-control'
-                    id='summary'
-                    placeholder='Write your summary here'
-                    ref={(input) => { _summary = input; }} />
-                <button style={button} type="submit" className="btn-btn-info">Submit!</button>
-            </form>
+                <form onSubmit={handleNewSubmission}>
+                    <textarea className='form-control'
+                        id='summary'
+                        placeholder='Write your summary here'
+                        ref={(input) => { _summary = input; }} />
+                    <button style={button} type="submit" className="btn-btn-info">Submit!</button>
+                </form>
+            </div>  
         </div>
     );
 }
