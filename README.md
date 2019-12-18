@@ -1,4 +1,4 @@
-# _A Language Database_
+# _A Language Database of Summaries_
 
 #### _The Capstone Project for Epicodus_
 
@@ -11,6 +11,7 @@ This application prompts a user to watch a video and summarize what happened. A 
 * _Authentication_
 * _API call_
 * _Voice recording_
+* _Parsing Text, implementing part of speech search functionality_
 
 ## User Stories
 
@@ -33,7 +34,7 @@ _As a user_:
 _Please leave a comment on this repository if there are any questions._
 
 ## Technologies Used
- React, HTML, CSS
+ JavaScript, React, HTML, CSS
 
 ### License
 
