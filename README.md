@@ -7,7 +7,7 @@
 ## Description
 This application prompts a user to watch a video and summarize what happened. A researcher can then see a list of summaries and query by word, phrase, or letter, in order to find language patterns. 
 
-# Stretch Goals:
+### Stretch Goals:
 * _Authentication_
 * _POS tagging_
 * _API call_
