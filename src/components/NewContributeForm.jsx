@@ -29,8 +29,8 @@ function NewContributeForm(props) {
     var video={
         textAlign: "center",
         position: "absolute",
-        top: "55%",
-        right: "30%",
+        top: "50%",
+        left: "30%",
     }
 
     var inputField={
@@ -41,20 +41,28 @@ function NewContributeForm(props) {
         textAlign: 'center',
         color:'#4056A1',
         position: "absolute",
-        top: "19%",
+        top: "10%",
         right: "35%",
     }
 
     var heroInfo = {
         textAlign: "center",
         position: "absolute",
-        bottom: "50%",
-        right: "20%",
+        bottom: "60%",
+        fontSize: '20px',
+        color: '#4056A1' 
     }
 
     var button={
         color: 'blue',
         marginLeft: '625px'
+    }
+
+    var formInfo = {
+        textAlign: "center",
+        position: "absolute",
+        top: '100%',
+        right: "20%",
     }
 
 
@@ -63,11 +71,11 @@ function NewContributeForm(props) {
             <Navbar />
             <div>
                 <img src={language} style={coverImage} />
-                <p style={inputField}>Contribute to the corpus! </p>
+                <h2 style={inputField}>Contribute to the corpus! </h2>
                 <p style={heroInfo}> Watch the short video, and then summarize what you saw. Try to be as detailed as possible, but do not worry about spelling, punctuation, and other forms of grammar.</p>
                 <YoutubeEmbedVideo videoId="AkLnj5pJtDI" suggestions={false} style={video} />
 
-                <form onSubmit={handleNewSubmission}>
+                <form onSubmit={handleNewSubmission} style={formInfo}>
                     <textarea className='form-control'
                         id='summary'
                         placeholder='Write your summary here'

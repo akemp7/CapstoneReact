@@ -3,6 +3,8 @@ import Contribute from './Contribute';
 import Navbar from './Navbar';
 import PropTypes from 'prop-types';
 
+//Not able to search by POS tags yet
+
 class ContributeControl extends React.Component {
     constructor() {
         super();
