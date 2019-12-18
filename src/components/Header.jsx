@@ -27,7 +27,7 @@ function Header() {
     return (
         <div>
             <img src={language} style={coverImage} />
-            <h1 style={heroText}>Welcome to the corpus of something...</h1>
+            <h1 style={heroText}>Welcome to a corpus of summaries</h1>
             <p style={heroInfo}>A place for the public and researchers to add to a language data set</p>
         </div>
     );
