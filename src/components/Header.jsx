@@ -18,7 +18,7 @@ function Header() {
     var heroInfo = {
         textAlign: "center",
         position: "absolute",
-        bottom: "42%",
+        bottom: "60%",
         left: "35%",
         fontSize: "20px",
         color: '#4056A1'

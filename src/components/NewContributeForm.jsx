@@ -29,7 +29,7 @@ function NewContributeForm(props) {
     var video={
         textAlign: "center",
         position: "absolute",
-        top: "50%",
+        top: "30%",
         left: "30%",
     }
 
@@ -37,20 +37,21 @@ function NewContributeForm(props) {
         marginTop: '10px',
         marginLeft: '20px',
         marginRight: '20px',
-        fontSize: '25px',
+        fontSize: '30px',
         textAlign: 'center',
         color:'#4056A1',
         position: "absolute",
         top: "10%",
-        right: "35%",
+        left: "35%",
     }
 
     var heroInfo = {
         textAlign: "center",
         position: "absolute",
-        bottom: "60%",
+        top: "15%",
         fontSize: '20px',
-        color: '#4056A1' 
+        color: '#4056A1',
+        left: "20%"
     }
 
     var button={
@@ -61,8 +62,8 @@ function NewContributeForm(props) {
     var formInfo = {
         textAlign: "center",
         position: "absolute",
-        top: '100%',
-        right: "20%",
+        top: '60%',
+        left: "20%",
     }
 
 
