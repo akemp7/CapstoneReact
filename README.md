@@ -5,7 +5,6 @@
 #### By _Anita Kemp_
 
 ## Description
-This application prompts a user to watch a video and then summarize what happened afterwards. A researcher can then see a list of summaries and query by word, phrase, or letter, in order to find language patterns. Part of Speech (POS) tagging has been implemented (from an npm package) in order to also allow the researcher to query by noun, verb, adjective, etc. 
 
 Currently this is all frontend with React. However, in the future there will also be an API built with C#. 
 
@@ -21,13 +20,6 @@ This demonstrates how state is lifted in this React application.
 
 ## User Stories
 
-_As a researcher_:
-    - I want the user to input summary based on a video (for now, to control variability)
-    - I want the user to input language background 
-    - I want the ability to query user input that has been stored in an API
-
-_As a user_:
-    - Users should be able to summarize what happened in video either by text or by audio.
 
 ## Setup/Installation Requirements
 * _Clone this repository_
